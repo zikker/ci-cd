@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY CMakeLists.txt .
 COPY main.cpp .
+COPY palindrome.cpp .
+COPY palindrome.h .
+COPY test ./test
 
 RUN mkdir build
 WORKDIR /app/build
@@ -13,4 +16,4 @@ RUN cmake --build .
 
 EXPOSE 8080
 
-ENTRYPOINT ["./MyDrogonApp"]
+CMD ["./MyDrogonApp"]
