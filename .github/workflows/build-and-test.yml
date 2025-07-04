@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 env:
-  IMAGE_NAME: zikker1/drogonapi
+  IMAGE_NAME: ci-cd
 
 jobs:
   build-and-test:
