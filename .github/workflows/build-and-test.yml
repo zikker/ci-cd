@@ -2,9 +2,7 @@ name: CI for Drogon App
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [master]
 
 env:
   IMAGE_NAME: zikker1/drogonapi
@@ -21,4 +19,4 @@ jobs:
       run: docker build -t $IMAGE_NAME .
 
     - name: ✅ Run tests
-      run: docker run --rm $IMAGE_NAME ctest --output-on-failure
+      run: docker run --rm $IMAGE_NAME ctest --test-dir /app/build --output-on-failure
